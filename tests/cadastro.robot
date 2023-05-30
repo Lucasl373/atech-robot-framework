@@ -2,7 +2,9 @@
 #Library         Browser
 #Library        FakerLibrary > "Serve para preencher emails aleatórios"
 #Library         resources/libs/mongo.py
-Resource        resources/base.robot
+#Resource        resources/base.robot
+
+Resource    ../resources/base.robot
 
 
 
