@@ -22,3 +22,12 @@ Notice Should be
     Wait For Elements State    ${notice}    visible    5
     
     Get Text    ${notice}    equal    ${message}
+Notice msgs campos em branco
+    [Arguments]    ${msg_erro}
+    ${msg_erro_1}    Set Variable    css=Small[class=alert-error] >> text=Informe seu nome completo
+    ${msg_erro_2}    Set Variable    css=Small[class=alert-error] >> text=Informe seu e-email
+    ${msg_erro_3}    Set Variable    css=Small[class=alert-error] >> text=Informe uma senha com pelo menos 6 digitos
+
+    Get Text    ${msg_erro_1}    equal    ${msg_erro}[msg01]
+    Get Text    ${msg_erro_2}    equal    ${msg_erro}[msg02]
+    Get Text    ${msg_erro_3}    equal    ${msg_erro}[msg03]

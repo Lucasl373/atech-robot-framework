@@ -8,7 +8,9 @@ Resource        resources/base.robot
 
 *** Variables ***
 &{user}=    name=Lucas Silva    email=lucasl373@gmail.com    password=L12345
-&{user_Duplicado}=    name=Carlos Castro    email=carlos@gmail.com    password=L12345
+&{user_Duplicado}=    name=Carlos Castro    email=carlos@gmail.com    password=123456
+&{user_vazio}=    name=    email=    password=
+&{msg_erro}=    msg01=Informe seu nome completo    msg02=Informe seu e-email    msg03=Informe uma senha com pelo menos 6 digitos
 
 
 
@@ -24,12 +26,13 @@ Deve cadastrar um novo usuário.
             
     #${email}    Free Email > "Serve para preencher emails aleatórios"
     #Fill Text   css=input[name=email]       $${email} > "Serve para preencher emails aleatórios"
-    
+  
     
 
     
 
 Usuário já existente
+
     Remove User By Email    ${user_Duplicado}[email]
     Start session
     Go to signup
@@ -39,4 +42,9 @@ Usuário já existente
     Notice Should be    Oops! Já existe um cadastro com e-mail informado.
     Sleep    2
 
-    
+Campos Obrigatorios em branco
+    Start session
+    Go to signup
+    Registrar usuarios no portal    ${user_vazio}
+    Notice msgs campos em branco    ${msg_erro}
+    Sleep    5
