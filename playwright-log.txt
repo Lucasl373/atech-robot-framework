@@ -1,5 +1,0 @@
-{"level":30,"time":"2023-06-06T18:55:52.696Z","pid":24528,"hostname":"ATECHAPgMEmrKUi","msg":"Listening on 55612"}
-{"level":30,"time":"2023-06-06T18:55:52.732Z","pid":24528,"hostname":"ATECHAPgMEmrKUi","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2023-06-06T18:55:52.733Z","pid":24528,"hostname":"ATECHAPgMEmrKUi","msg":"End of node method getBrowserCatalog"}
-{"level":30,"time":"2023-06-06T18:55:52.741Z","pid":24528,"hostname":"ATECHAPgMEmrKUi","msg":"Start of node method getBrowserCatalog"}
-{"level":30,"time":"2023-06-06T18:55:52.741Z","pid":24528,"hostname":"ATECHAPgMEmrKUi","msg":"End of node method getBrowserCatalog"}
