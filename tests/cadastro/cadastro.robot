@@ -4,14 +4,14 @@
 #Library         resources/libs/mongo.py
 #Resource        resources/base.robot
 
-Resource    ../resources/base.robot
+Resource    C:\QAx\projects\mark85-robot\resources\base.robot
 
 
 
 *** Variables ***
 &{user}=    name=Lucas Silva    email=lucasl373@gmail.com    password=L12345
 &{user_Duplicado}=    name=Carlos Castro    email=carlos@gmail.com    password=123456
-&{user_vazio}=    name=    email=    password=
+&{user_vazio}=    name=${EMPTY}    email=${EMPTY}    password=${EMPTY}
 &{msg_erro}=    msg01=Informe seu nome completo    msg02=Informe seu e-email    msg03=Informe uma senha com pelo menos 6 digitos
 
 
@@ -33,20 +33,22 @@ Deve cadastrar um novo usuário.
 
     
 
-Usuário já existente
+Usuário já existente Duplicado
 
     Remove User By Email    ${user_Duplicado}[email]
+    Insert User             ${user_Duplicado}
     Start session
     Go to signup
-    Registrar usuarios no portal    ${user_Duplicado}
-    Sleep    2
+    #Registrar usuarios no portal    ${user_Duplicado}
+    #Sleep    2
     Registrar usuarios no portal    ${user_Duplicado}
     Notice Should be    Oops! Já existe um cadastro com e-mail informado.
     Sleep    2
 
 Campos Obrigatorios em branco
+    [Tags]    Branco
     Start session
     Go to signup
     Registrar usuarios no portal    ${user_vazio}
     Notice msgs campos em branco    ${msg_erro}
-    Sleep    5
+    Sleep    2

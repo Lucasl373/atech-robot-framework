@@ -3,7 +3,10 @@ Documentation        Tudo começa aqui
 
 Library  Browser
 Library  libs/mongo.py
-Resource   Pages/signup.robot
+Resource       Pages/signup.robot
+Resource       helpers.robot
+Resource       Pages/components.robot
+Resource       Pages/tasks.robot
 
 *** Keywords ***
 Start session
