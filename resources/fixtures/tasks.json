@@ -1,0 +1,31 @@
+{
+    "create": {
+        "user": {
+            "name": "Maya Oliveira",
+            "email": "maya@gmail.com",
+            "password": "M123456"
+
+
+        },
+        "task": {
+            "name": "Pagar a fatura do cartão de crédito",
+            "tags": ["BB","Bradesco","Santander"]
+
+        }
+    },
+
+    "remove": {
+        "user": {
+            "name": "XUXA Menegel",
+            "email": "xuxa@gmail.com",
+            "password": "X123456"
+
+
+        },
+        "task": {
+            "name": "Criar cenário da TV",
+            "tags": ["Apresentação","Desenho","Entrevista"]
+
+        }
+    }
+}
