@@ -47,3 +47,12 @@ Remove Task
     [Arguments]    ${task_name}
 
     Click    xpath=//strong[text()="${task_name}"]/..//button[@class="task-remove"]
+
+Marcar Task
+    [Arguments]    ${task_name}
+
+    Click    xpath=//strong[text()="${task_name}"]/..//button[@class="item-toggle"]
+    Wait For Elements State
+    
+    ...    //strong[text()="${task_name}"]/..//button[@class="item-toggle-selected"]
+    ...    visible    5

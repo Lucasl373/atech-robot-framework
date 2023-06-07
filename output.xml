@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.3 on win32)" generated="20230607 08:24:33.999" rpa="false" schemaversion="3">
+<suite id="s1" name="Cadastro-Tarefas" source="c:\QAx\projects\mark85-robot\tests\tarefas\cadastro-tarefas.robot">
+<test id="s1-t1" name="Deve remover uma tarefa indesejada" line="22">
+<kw name="get fixture" library="helpers">
+<var>${data}</var>
+<arg>tasks</arg>
+<arg>remove</arg>
+<kw name="Load Json From File" library="JSONLibrary">
+<var>${data}</var>
+<arg>../../resources/fixtures/${filename}.json</arg>
+<arg>encoding=utf-8</arg>
+<doc>Load JSON from file.</doc>
+<msg timestamp="20230607 08:24:37.261" level="ERROR">JSON file: ../../resources/fixtures/tasks.json not found</msg>
+<msg timestamp="20230607 08:24:37.271" level="FAIL">OSError</msg>
+<status status="FAIL" starttime="20230607 08:24:37.261" endtime="20230607 08:24:37.279"/>
+</kw>
+<status status="FAIL" starttime="20230607 08:24:37.260" endtime="20230607 08:24:37.279"/>
+</kw>
+<kw name="Create new user" library="helpers">
+<arg>${data}[user]</arg>
+<status status="NOT RUN" starttime="20230607 08:24:37.280" endtime="20230607 08:24:37.280"/>
+</kw>
+<kw name="Login session" library="base">
+<arg>${data}[user]</arg>
+<status status="NOT RUN" starttime="20230607 08:24:37.280" endtime="20230607 08:24:37.280"/>
+</kw>
+<kw name="Go to task form" library="tasks">
+<status status="NOT RUN" starttime="20230607 08:24:37.281" endtime="20230607 08:24:37.281"/>
+</kw>
+<kw name="Submit task form" library="tasks">
+<arg>${data}[task]</arg>
+<status status="NOT RUN" starttime="20230607 08:24:37.282" endtime="20230607 08:24:37.282"/>
+</kw>
+<kw name="Task should be registered" library="tasks">
+<arg>${data}[task][name]</arg>
+<status status="NOT RUN" starttime="20230607 08:24:37.283" endtime="20230607 08:24:37.283"/>
+</kw>
+<kw name="Remove Task" library="tasks">
+<arg>${data}[task][name]</arg>
+<status status="NOT RUN" starttime="20230607 08:24:37.284" endtime="20230607 08:24:37.284"/>
+</kw>
+<kw name="Task should not exist" library="tasks">
+<arg>${data}[task][name]</arg>
+<status status="NOT RUN" starttime="20230607 08:24:37.284" endtime="20230607 08:24:37.285"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20230607 08:24:37.285" endtime="20230607 08:24:37.285"/>
+</kw>
+<status status="FAIL" starttime="20230607 08:24:37.257" endtime="20230607 08:24:37.287">OSError</status>
+</test>
+<doc>Cadastro de Tarefas</doc>
+<status status="FAIL" starttime="20230607 08:24:34.021" endtime="20230607 08:24:37.310"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Cadastro-Tarefas">Cadastro-Tarefas</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20230607 08:24:37.261" level="ERROR">JSON file: ../../resources/fixtures/tasks.json not found</msg>
+</errors>
+</robot>

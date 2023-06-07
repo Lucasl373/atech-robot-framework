@@ -27,5 +27,25 @@
             "tags": ["Apresentação","Desenho","Entrevista"]
 
         }
+    },
+
+    "marcar": {
+        "user": {
+            "name": "Bia Maia",
+            "email": "biamaia@gmail.com",
+            "password": "B123456"
+
+
+        },
+        "task": {
+            "name": "Criar Treino",
+            "tags": ["Saque","Cruzada","Paralela"]
+
+        },
+        "task1": {
+            "name": "Criar Estratégia",
+            "tags": ["Rede","Lateral","Fundo Quadra"]
+
+        }
     }
 }
